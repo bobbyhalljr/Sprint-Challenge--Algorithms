@@ -96,9 +96,19 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
-
+        # loop through l
+        for i in range(0, len(l) -1): 
+            # find the smallest index
+            curr_index = i
+            smallest_index = curr_index
+        # move smallest index to left
+        for s in range(curr_index + 1, len(l)):
+            # compare indexes
+            self.compare_item()
+            smallest_index = j
+            j += 1
+        # swap indices if its the smallest index
+        self.swap_item()
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
