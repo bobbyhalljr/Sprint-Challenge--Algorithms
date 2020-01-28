@@ -92,20 +92,54 @@ class SortingRobot:
         """
         return self._light == "ON"
 
+
     def sort(self):
         """
         Sort the robot's list.
         """
 
-        # start at begining of list
-        # if can move right, move right
-        # compare current index to the index to the right
-        # if current index greater than next index, swap indeices
-        for i in l:
-            if self.can_move_right():
-                self.move_right()
-                self.compare_item()
-                self.swap_item()
+        # loop through length of list range(len(l))
+        for i in range(len(self._list)):
+            # loop again range(index + 1, len(l))
+            for j in range(i + 1, len(self._list)):
+                # increment position
+                self._position = j
+                # if position is less then item (compare)
+                if self.compare_item() == 1:
+                    # swap (swap)
+                    self.swap_item()
+
+
+
+
+
+        # loop through list 
+        # for i in range(len(l)):
+        #     self._position += 1
+        #     # if position is less then item
+        #     if self._position > self._item:
+        #         #  swap
+        #         self.swap_item()
+
+
+        # loop through list
+        # for i in range(1, len(l)):
+        #     value = l[i]
+        #     i = i - 1
+        #     while i >= 0:
+
+
+
+
+            # if can move right
+            # if self.can_move_right():
+            #     # move right
+            #     self.move_right()
+            #     # compare item to iteration
+            #     self.compare_item()
+            #     # if iteration is smaller than item, swap
+            #     self.swap_item()
+                
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
